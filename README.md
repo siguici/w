@@ -1,4 +1,4 @@
-# W
+# [<img src="https://github.com/wdotv/art/blob/HEAD/w-logo.svg" alt="W" width="64" />](https://github.com/wdotv)
 
 **W** is a modular, full-featured,
 developer-first web application framework for [V](https://vlang.io),
