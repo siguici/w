@@ -1,6 +1,6 @@
-# Viv
+# W
 
-**Viv** is a modular, full-featured,
+**W** is a modular, full-featured,
 developer-first web application framework for [V](https://vlang.io),
 with built-in auth & RBAC,
 and an expressive ORM inspired by [Laravel](https://laravel.com)'s Eloquent.
@@ -11,23 +11,17 @@ and an expressive ORM inspired by [Laravel](https://laravel.com)'s Eloquent.
 
 > **Requirements:** V 0.4.x or later
 
-- Install via VPM:
-
-```bash
-v install siguici.viv
-```
-
 - Install from source:
 
 ```bash
-mkdir -p ${VMODULES:-$HOME/.vmodules}/siguici
-git clone --depth=1 https://github.com/siguici/viv ${VMODULES:-$HOME/.vmodules}/siguici/viv
+mkdir -p ${VMODULES:-$HOME/.vmodules}
+git clone --depth=1 https://github.com/siguici/w ${VMODULES:-$HOME/.vmodules}/w
 ```
 
 - Import directly:
 
 ```v
-import siguici.viv
+import w
 ```
 
 ---
@@ -44,7 +38,7 @@ import siguici.viv
 ## 🧪 Example Usage
 
 ```v
-import siguici.viv.orm { Model }
+import w.orm { Model }
 
 struct User {
     Model
@@ -63,13 +57,13 @@ fn (u User) posts() []Post {
 
 Documentation is in progress.
 
-Stay tuned via: [https://github.com/siguici/viv](https://github.com/siguici/viv)
+Stay tuned via: [https://github.com/siguici/w](https://github.com/siguici/w)
 
 ---
 
 ## 🧠 Philosophy
 
-Viv draws inspiration from frameworks like Laravel, AdonisJS, and Django,
+W draws inspiration from frameworks like Laravel, AdonisJS, and Django,
 but focuses on the simplicity, performance, and native nature of V.
 
 Its goal is to offer a clean, expressive, and modular foundation
