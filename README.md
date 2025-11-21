@@ -20,8 +20,8 @@ v install siguici.viv
 - Install from source:
 
 ```bash
-mkdir -p ${V_MODULES:-$HOME/.vmodules}/siguici
-git clone --depth=1 https://github.com/siguici/viv ${V_MODULES:-$HOME/.vmodules}/siguici/viv
+mkdir -p ${VMODULES:-$HOME/.vmodules}/siguici
+git clone --depth=1 https://github.com/siguici/viv ${VMODULES:-$HOME/.vmodules}/siguici/viv
 ```
 
 - Import directly:
