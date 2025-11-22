@@ -11,6 +11,12 @@ and an expressive ORM inspired by [Laravel](https://laravel.com)'s Eloquent.
 
 > **Requirements:** V 0.4.x or later
 
+- Via V (Recommended)
+
+```sh
+v install --git https://github.com/siguici/w
+```
+
 - Install from source:
 
 ```bash
