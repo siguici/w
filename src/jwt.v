@@ -11,18 +11,23 @@ import crypto.sha256
 // --------------------------
 
 fn base64url_encode(data []u8) string {
-	mut out := base64.encode(data)
-	out = out.replace('+', '-').replace('/', '_')
-	return out.trim_right('=')
+	mut s := base64.encode(data)
+	s = s.replace('+', '-').replace('/', '_')
+	// remove padding '='
+	for s.ends_with('=') {
+		s = s[..s.len - 1]
+	}
+	return s
 }
 
-fn base64url_decode(data string) ![]u8 {
-	mut d := data.replace('-', '+').replace('_', '/')
-	padding := d.len % 4
+fn base64url_decode(s string) ![]u8 {
+	mut t := s.replace('-', '+').replace('_', '/')
+	// restore padding to multiple of 4
+	padding := (4 - (t.len % 4)) % 4
 	if padding > 0 {
-		d += '='.repeat(4 - padding)
+		t += '='.repeat(padding)
 	}
-	return base64.decode(d)
+	return base64.decode(t)
 }
 
 // --------------------------
