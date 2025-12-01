@@ -3,7 +3,7 @@ module w
 import db.pg
 import siguici.envig
 
-pub fn create_connection(config envig.Envig) !pg.DB {
+pub fn create_connection(mut config envig.Envig) !pg.DB {
 	host := config.get('database.host')
 	port := config.get('database.port')
 	user := config.get('database.username')
